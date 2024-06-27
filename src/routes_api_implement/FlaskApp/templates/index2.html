@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Fuel Calculator</title>
+		<script src="../static/js/app.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	</head>
+
+	<body onload="onLoadFillManufcature();">
+		<div class="container">
+			<form id="myForm" class="m-auto" style="max-width:600p">
+				<h3 class="my-4">Fuel Calculator</h3>
+				<hr class="my-4" />
+				<div class="form-group mb-3 row">
+					<label for="manufacurer2" class="col-md-5 col-form-label">Manufacurer</label>
+					<div class="col-md-7">
+						<select class="form-select custom-select custom-select-lg" id="manufacturer" onchange="onChangeSelectCar(this);">
+							<option value="none">Manufacturer</option>
+						</select></div>
+				</div>
+				<div class="form-group mb-3 row">
+					<label for="model3" class="col-md-5 col-form-label">Model</label>
+					<div class="col-md-7">
+						<select class="form-select custom-select custom-select-lg" id="model" onchange="onChangeSelectCar(this);">
+							<option value="none">Car Model</option>
+						</select></div>
+				</div>
+				<div class="form-group mb-3 row">
+					<label for="year4" class="col-md-5 col-form-label">Year</label>
+					<div class="col-md-7">
+						<select class="form-select custom-select custom-select-lg" id="year" onchange="onChangeSelectCar(this);">
+							<option value="none">Year</option>
+						</select></div>
+				</div>
+				<div class="form-group mb-3 row">
+					<label for="engine-type5" class="col-md-5 col-form-label">Engine type</label>
+					<div class="col-md-7">
+						<select class="form-select custom-select custom-select-lg" id="engine_type" onchange="onChangeSelectCar(this);">
+							<option value="none">Engine Type</option>
+						</select></div>
+				</div>
+				<div class="form-group mb-3 row">
+					<label for="engine-valume6" class="col-md-5 col-form-label">Engine valume</label>
+					<div class="col-md-7">
+						<select class="form-select custom-select custom-select-lg" id="engine_volume" onchange="onChangeSelectCar(this);">
+							<option value="none">Engine Volume</option>
+						</select></div>
+				</div>
+				<hr class="my-4" />
+				<div class="form-group mb-3 row">
+					<label for="origin7" class="col-md-5 col-form-label">Origin</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control form-control-lg" id="from" name="origin" required>
+						<small class="form-text text-muted"> Please enter a valid address</small>
+					</div>
+				</div>
+				<div class="form-group mb-3 row">
+					<label for="destination9" class="col-md-5 col-form-label">Destination</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control form-control-lg" id="to" name="destination" required><small class="form-text text-muted"> Please enter a valid address</small></div>
+				</div>
+				<div class="form-group mb-3 row">
+					<label for="time" class="col-md-5 col-form-label">Depurture time</label>
+					<div class="col-md-7">
+						<input type="datetime-local" class="form-control form-control-lg" id="exp_time" name="time" required>
+						<small class="form-text text-muted"> Please enter a valid time</small></div>
+				</div>
+				<hr class="my-4" />
+
+				<div id="output_div" hidden="hidden">
+					<label>Distance: (km)</label><br>
+					<label id="distance" class="output_label"></label><br>
+					<label>Driving time: (min)</label><br>
+					<label id="time" class="output_label"></label><br>
+					<label>Fuel consamption (L/km): </label><br>
+					<label id="consumption" class="output_label"></label><br>
+					<label>Fuel price (per L): </label><br>
+					<label id="price" class="output_label"></label><br>
+					<label>Total cost of driving: </label><br>
+					<label id="total" class="output_label"></label><br>
+					<hr class="my-4" />
+				</div>
+
+				<div class="form-group mb-3 row">
+					<label for="submit14" class="col-md-5 col-form-label"></label>
+
+					<div class="col-md-7">
+						<button class="btn btn-primary btn-lg" type="button" onclick="submit_form();">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3d-PspnvPDjkOTuYPbteyeyzgTDHsoBc&libraries=places "></script>
+    <script>
+        var options = {
+            types: ['(cities)']
+        }
+
+        var input1 = document.getElementById("from");
+        var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
+
+        var input2 = document.getElementById("to");
+        var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
+    </script>
+
+	</body>
+
+</html>

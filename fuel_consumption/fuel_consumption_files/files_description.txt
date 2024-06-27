@@ -1,0 +1,60 @@
+Files description:
+All the files were taken from https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64 (Government of Canada).
+Datasets provide model-specific fuel consumption ratings and estimated carbon dioxide emissions for new light-duty vehicles for retail sale in Canada.
+You can read more about the testing here: https://www.nrcan.gc.ca/energy-efficiency/transportation-alternative-fuels/fuel-consumption-guide/understanding-fuel-consumption-ratings/fuel-consumption-testing/21008
+
+Each row descripts results of a specific car that was tested.
+The parameters are:
+* MODEL YEAR
+* MAKE - manufacturer
+* MODEL - name of model
+* VEHICLE CLASS
+	COMPACT
+	FULL-SIZE
+	MID-SIZE
+	MINICOMPACT
+	MINIVAN
+	Pickup truck: Small
+	Pickup truck: Standard / PICKUP TRUCK - STANDARD	
+	Special purpose vehicle
+	Station wagon: Mid-size / STATION WAGON - MID-SIZE
+	Station wagon: Small / 	STATION WAGON - SMALL
+	SUBCOMPACT
+	SUV
+	SUV: Small
+	SUV: Standard
+	TWO-SEATER
+	VAN - CARGO
+	Van: Passenger / VAN - PASSENGER
+* Model	
+	4WD/4X4 = Four-wheel drive
+	AWD = All-wheel drive
+	CNG = Compressed natural gas
+	FFV = Flexible-fuel vehicle
+	NGV = Natural gas vehicle
+	SWB = Short wheelbase
+	LWB = Long wheelbase
+	EWB = Extended wheelbase
+	# = High output engine that provides more power than the standard engine of the same size
+* Transmission	
+	A = Automatic
+	AM = Automated manual
+	AS = Automatic with select shift
+	AV = Continuously variable
+	M = Manual
+	3 – 10 = Number of gears
+* Fuel Type	
+	X = Regular gasoline
+	Z = Premium gasoline
+	D = Diesel
+	E = Ethanol (E85)
+	N = Natural Gas
+* Fuel Consumption
+	City and highway fuel consumption ratings are shown in litres per 100 kilometres (L/100 km) - combined rating (55% city, 45% hwy) is shown in L/100 km and in miles per imperial gallon (mpg)
+* CO2 Emissions 
+	(g/km)	Estimated tailpipe carbon dioxide emissions (in grams per kilometre) are based on fuel type and the combined fuel consumption rating.
+* CO2 rating	
+	the tailpipe emissions of carbon dioxide rated on a scale from 1 (worst) to 10 (best)
+* Smog rating	
+	the tailpipe emissions of smog-forming pollutants rated on a scale from 1 (worst) to 10 (best)
+
